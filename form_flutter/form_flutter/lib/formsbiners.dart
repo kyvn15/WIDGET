@@ -11,7 +11,7 @@ class _FormBinersState extends State<FormBiners> {
   final TextEditingController nameController = TextEditingController();
   String? birthDate; // Untuk menyimpan tanggal lahir
   String? selectedYear; // Tahun jadi fans Barca
-  String? sex; // Gender
+  String? gender; // Gender
   bool ison = false; // Sudah follow Instagram
   bool isOn = false; // Sudah siap mental
   bool isChecked = false; // Setia mendukung saat kalah
@@ -63,7 +63,7 @@ class _FormBinersState extends State<FormBiners> {
                     "Nama: ${nameController.text.isNotEmpty ? nameController.text : "Belum diisi"}"),
                 Text("Tanggal Lahir: ${birthDate ?? "Belum diisi"}"),
                 Text("Tahun Jadi Fans Barca: ${selectedYear ?? "Belum diisi"}"),
-                Text("Gender: ${sex ?? "Belum dipilih"}"),
+                Text("Gender: ${gender ?? "Belum dipilih"}"),
                 Text("Follow Instagram: ${ison ? "Sudah" : "Belum"}"),
                 Text("Siap Mental: ${isOn ? "Ya" : "Belum"}"),
                 Text(
@@ -210,11 +210,11 @@ class _FormBinersState extends State<FormBiners> {
                     children: [
                       Radio(
                         value: 'laki - laki',
-                        groupValue: sex,
+                        groupValue: gender,
                         onChanged: (String? val) {
                           setState(() {
                             if (val != null) {
-                              sex = val;
+                              gender = val;
                             }
                           });
                         },
@@ -223,11 +223,11 @@ class _FormBinersState extends State<FormBiners> {
                       const SizedBox(width: 20),
                       Radio(
                         value: 'perempuan',
-                        groupValue: sex,
+                        groupValue: gender,
                         onChanged: (String? val) {
                           setState(() {
                             if (val != null) {
-                              sex = val;
+                              gender = val;
                             }
                           });
                         },

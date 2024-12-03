@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_flutter/sirav.dart'; // Jika ini mengimpor file lain, pastikan ini benar.
+import 'package:project_flutter/text.dart'; // Jika ini mengimpor file lain, pastikan ini benar.
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const Siravs(), // Gantilah ke IconsExample sesuai nama class
+      home: const Texts(), // Gantilah ke IconsExample sesuai nama class
     );
   }
 }
